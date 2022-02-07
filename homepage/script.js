@@ -10,3 +10,7 @@
 // been completely laoded and parsed, without waiting for
 // styesheet, images and subframes to finish laoding.
 document.addEventListener("DOMContentLoaded", init);
+
+async function init() {
+    let response = await fetch("./data/flag-name.json");
+    let countries = await response.json();
